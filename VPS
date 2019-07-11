@@ -1,0 +1,22 @@
+如何查找想要的内核？
+在 google 中搜索：site:centos.org 你需要的内核
+
+下载内核 
+wget https://people.centos.org/arrfab/shim/results/kernel/20181108233701/3.10.0-957.el7.x86_64/kernel-3.10.0-957.el7.x86_64.rpm
+
+安装内核
+rpm -ivh --oldpackage kernel-3.10.0-957.el7.x86_64.rpm
+
+查看已安装的内核版本：
+egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
+
+设置使用安装的内核版本启动：
+grub2-set-default 1
+
+安装锐速
+bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) install
+使用方法:
+启动命令 /appex/bin/lotServer.sh start
+停止加速 /appex/bin/lotServer.sh stop
+状态查询 /appex/bin/lotServer.sh status
+重新启动 /appex/bin/lotServer.sh restart
