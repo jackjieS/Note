@@ -1,3 +1,6 @@
+查看内核
+uname -r
+
 如何查找想要的内核？
 在 google 中搜索：site:centos.org 你需要的内核
 
