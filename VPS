@@ -21,6 +21,8 @@ grub2-set-default "kernel-3.10.0-957.el7.x86_64"
 
 安装锐速
 bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) install
+
+
 使用方法:
 启动命令 /appex/bin/lotServer.sh start
 停止加速 /appex/bin/lotServer.sh stop
@@ -31,3 +33,8 @@ ssr
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
+自启动
+chmod +x /etc/rc.d/rc.local
+echo "/appex/bin/lotServer.sh start" >> /etc/rc.d/rc.local
+echo "/usr/sbin/ccaa start" >> /etc/rc.d/rc.local
