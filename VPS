@@ -1,5 +1,6 @@
 查看内核
 uname -r
+yum install -y wget && yum update -y && wget https://people.centos.org/arrfab/shim/results/kernel/20181108233701/3.10.0-957.el7.x86_64/kernel-3.10.0-957.el7.x86_64.rpm && rpm -ivh --oldpackage kernel-3.10.0-957.el7.x86_64.rpm --force && reboot
 
 如何查找想要的内核？
 在 google 中搜索：site:centos.org 你需要的内核
