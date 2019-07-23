@@ -5,7 +5,7 @@ uname -r
 在 google 中搜索：site:centos.org 你需要的内核
 
 下载内核 
-wget https://people.centos.org/arrfab/shim/results/kernel/20181108233701/3.10.0-957.el7.x86_64/kernel-3.10.0-957.el7.x86_64.rpm
+yum install -y wget && wget https://people.centos.org/arrfab/shim/results/kernel/20181108233701/3.10.0-957.el7.x86_64/kernel-3.10.0-957.el7.x86_64.rpm
 
 安装内核
 rpm -ivh --oldpackage kernel-3.10.0-957.el7.x86_64.rpm --force
