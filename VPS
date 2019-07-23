@@ -8,7 +8,7 @@ uname -r
 wget https://people.centos.org/arrfab/shim/results/kernel/20181108233701/3.10.0-957.el7.x86_64/kernel-3.10.0-957.el7.x86_64.rpm
 
 安装内核
-rpm -ivh --oldpackage kernel-3.10.0-957.el7.x86_64.rpm
+rpm -ivh --oldpackage kernel-3.10.0-957.el7.x86_64.rpm --force
 
 查看已安装的内核版本：
 rpm -qa | grep kernel
