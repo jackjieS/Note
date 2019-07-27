@@ -38,6 +38,4 @@ grub2-editenv list
 grub2-set-default "kernel-3.10.0-957.el7.x86_64"
 
 谷歌DD winserver
-yum install -y wget && wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh' && bash InstallNET.sh --ip-addr 10.170.0.3 --ip-mask 255.255.255.0 --ip-gate 10.170.0.1 -dd 'https://image.moeclub.org/GoogleDrive/1OVA3t-ZI2arkM4E4gKvofcBN9aoVdneh'
-
-
+wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh' && bash InstallNET.sh --ip-addr 10.170.0.13 --ip-mask 255.255.255.0 --ip-gate 10.170.0.1 -dd 'https://image.moeclub.org/GoogleDrive/1OVA3t-ZI2arkM4E4gKvofcBN9aoVdneh'
