@@ -1,16 +1,13 @@
-CCAA
-yum -y install wget unzip curl
-wget https://github.com/helloxz/ccaa/archive/master.zip
-unzip master.zip && cd ccaa-master && sh ccaa.sh
+yum -y install wget unzip curl fuse
 
- Google Drive
-yum -y install unzip fuse
-curl https://rclone.org/install.sh | sudo bash
-mkdir -p /data/GoogleDrive
-rclone config
+CCAA 离线下载
+wget https://github.com/helloxz/ccaa/archive/master.zip&unzip master.zip && cd ccaa-master && sh ccaa.sh
+
+Google Drive
+mkdir -p /data/GoogleDrive && curl https://rclone.org/install.sh | sudo bash && rclone config
 rclone mount codesofun:share /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
-wget https://blog.codesofun.com/scripts/rcloned
-mv rcloned /etc/init.d/rcloned
+wget https://raw.githubusercontent.com/jackjieS/Note/master/GoogleDrive/rcloned && mv rcloned /etc/init.d/rcloned
+
 
 
 
