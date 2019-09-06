@@ -1,0 +1,38 @@
+CCAA
+yum -y install wget unzip curl
+wget https://github.com/helloxz/ccaa/archive/master.zip
+unzip master.zip && cd ccaa-master && sh ccaa.sh
+
+ Google Drive
+yum -y install unzip fuse
+curl https://rclone.org/install.sh | sudo bash
+mkdir -p /data/GoogleDrive
+rclone config
+rclone mount codesofun:share /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
+wget https://blog.codesofun.com/scripts/rcloned
+mv rcloned /etc/init.d/rcloned
+
+
+
+
+
+
+
+开机启动
+#设置权限
+chmod +x /etc/rc.d/rc.local
+#设置开机启动
+echo "/usr/sbin/ccaa start" >> /etc/rc.d/rc.local
+echo "bash /etc/init.d/rcloned start" >> /etc/rc.d/rc.local
+
+
+
+#安装crontab，如已安装请跳过
+yum -y install crontabs
+#新增计划任务
+crontab -e
+#添加如下内容
+* 2 * * 7 /etc/ccaa/upbt.sh > /dev/null
+#重启crontab服务
+service crond reload 	#CentOS 6
+systemctl reload crond	#CentOS 7
