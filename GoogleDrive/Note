@@ -5,7 +5,7 @@ wget https://github.com/helloxz/ccaa/archive/master.zip&unzip master.zip && cd c
 
 Google Drive
 mkdir -p /data/GoogleDrive && curl https://rclone.org/install.sh | sudo bash && rclone config
-rclone mount codesofun:share /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
+rclone mount GoogleDrive:/ /data/GoogleDrive --allow-other --allow-non-empty --vfs-cache-mode writes &
 wget https://raw.githubusercontent.com/jackjieS/Note/master/GoogleDrive/rcloned && mv rcloned /etc/init.d/rcloned
 
 
